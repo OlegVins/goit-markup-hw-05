@@ -622,8 +622,6 @@ font-weight: 700;
 
 .modal-overlay.is-open .modal {
     opacity: 0; 
-    transform: translateX(-50%);
-    transform: translateY(-50%);
     transition-delay: 300ms;
 }
 

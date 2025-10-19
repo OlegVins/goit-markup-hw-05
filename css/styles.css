@@ -617,12 +617,12 @@ font-weight: 700;
     border-radius: 4px;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
     background-color: #fcfcfc;
-    transition-property: opacity, transform;
+     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .modal-overlay.is-open .modal {
     opacity: 0; 
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transform: translateX(-50%);
     transform: translateY(-50%);
     transition-delay: 300ms;
@@ -650,6 +650,8 @@ font-weight: 700;
     background-color: #404bbf;
     border:none;
     transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    fill: #ffffff;
+     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-icon-close {
@@ -657,11 +659,6 @@ font-weight: 700;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-icon-close:hover,
-.modal-icon-close:focus {
-    fill: #fff;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
 .modal-title {
     font-weight: 500;
@@ -700,7 +697,7 @@ font-weight: 700;
     padding: 11px 38px;
     outline: transparent;
      border-radius: 4px;
-    
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     border: 1px solid rgba(46, 47, 66, 0.4);
     background-color: transparent;
     font-size: 18px;
@@ -710,7 +707,7 @@ font-weight: 700;
 
 .modal-form-input:focus {
      border-color: #4d5ae5;
-   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   
    
 }
 
@@ -774,15 +771,15 @@ justify-content: center;
 align-items: center;
 width: 16px;
 height: 16px;
-margin-right: 8px;
-fill: transparent;
-    border-radius: 2px;
+ border-radius: 2px;
     border: 1px solid rgba(46, 47, 66, 0.4);
+    margin-right: 8px;
+    fill: transparent;
     cursor: pointer;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-input[type="checkbox"]:checked + .agreement-wrapper> .agreement-checkbox {
+input[type="checkbox"]:checked + label> span {
     background-color:#404bbf;
     border: none;
     fill: #f4f4fd;
